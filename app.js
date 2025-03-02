@@ -26,19 +26,8 @@ function listado() {
     lista.innerHTML = ''; // Limpia la lista antes de agregar nuevos elementos
 
     for (let fila = 0; fila < amigos.length; fila++) {
-        let filaLista = document.createElement("li");
-        filaLista.textContent = amigos[fila];
-        lista.appendChild(filaLista);
+        let filaLista = document.createElement("li"); 
+        filaLista.textContent = amigos[fila]; 
+        lista.appendChild(filaLista); 
     }
 }
-
-/*function listado() {
-    let lista = document.getElementById("listaAmigos");
-    lista.innerHTML = ''; // Limpia la lista antes de agregar nuevos elementos
-    amigos.forEach(elemento => {
-        let filaLista = document.createElement("li"); //se crea una variable con un elemento html en este casi li
-        filaLista.textContent = elemento; // se le asigna la variable filaLista a cada elemento de array
-        lista.appendChild(filaLista); 
-    });
-}
-*/
