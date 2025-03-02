@@ -18,7 +18,6 @@ function agregarAmigo() {
         amigos.push(nombreAmigo);
         listado();
         limpiarCaja();
-        console.log(amigos);
 }
 
 function listado() {
@@ -31,3 +30,16 @@ function listado() {
         lista.appendChild(filaLista); 
     }
 }
+
+function sortearAmigo() {
+    
+    if (amigos.length === 0) {
+      document.getElementById("resultado").innerHTML = "No hay amigos para sortear."; //Validamos que haya amigos disponibles si no mandamos mensaje
+      return;
+    }   
+  
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length); //Generar un índice aleatorio
+    let amigoSorteado = amigos[indiceAleatorio]; //Obtenemos el nombre sorteado en base al indice
+    document.getElementById("resultado").innerHTML = "El amigo sorteado es: " + amigoSorteado; //Mostramos el mensaje de quien fue el amigo
+  }
+
